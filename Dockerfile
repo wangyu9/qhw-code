@@ -68,7 +68,7 @@ RUN sudo pip --no-cache-dir install \
 ################ Dependencies for Quasi-Harmonic Weights #################
 
 
-RUN sudo apt-get --assume-yes install gcc=7.5.0 g++=7.5.0
+RUN sudo apt-get --assume-yes install gcc g++
 
 RUN sudo mkdir qhw
 
