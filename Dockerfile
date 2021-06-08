@@ -72,4 +72,7 @@ RUN sudo apt-get --assume-yes install gcc g++
 
 RUN sudo mkdir qhw
 
+RUN sudo apt-get install libblas-dev liblapack-dev
+
+
 # https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/refs/tags/v5.7.1.zip
