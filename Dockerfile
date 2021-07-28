@@ -65,14 +65,51 @@ RUN sudo pip --no-cache-dir install \
         Pillow
 # sklearn somehow fails.
 
+
+RUN sudo apt-get update
+
+RUN sudo apt-get --assume-yes install git-all
+RUN sudo apt-get --assume-yes install cmake
+
 ################ Dependencies for Quasi-Harmonic Weights #################
 
 
 RUN sudo apt-get --assume-yes install gcc g++
 
+RUN sudo apt-get --assume-yes install libgmp3-dev # otherwise I am missing the file gmp.h
+RUN sudo apt-get --assume-yes install libmpfr-dev # for mpfr.h 
+
+
 RUN sudo mkdir qhw
 
-RUN sudo apt-get install libblas-dev liblapack-dev
+RUN sudo apt-get --assume-yes install libblas-dev liblapack-dev 
+
+# RUN sudo apt-get --assume-yes install libopenblas-dev
+
+RUN sudo mkdir /qhw/external
+
+Run wget -q -O - "https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/refs/tags/v5.7.1.tar.gz" | tar -xzf - -C /qhw/external
+
+RUN sudo mkdir /qhw/external/LibSuiteSparse-5.7.1
 
 
-# https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/refs/tags/v5.7.1.zip
+Run wget -q -O - "https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/refs/tags/v5.10.1.tar.gz" | tar -xzf - -C /qhw/external
+
+RUN sudo mkdir /qhw/external/LibSuiteSparse-5.10.1
+
+
+# RUN bash -c "cd /qhw/external/SuiteSparse-5.7.1/ && make config  BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.7.1 && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.7.1"
+
+RUN bash -c "cd /qhw/external/SuiteSparse-5.7.1/ && make config BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.7.1 && make library  BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so"
+
+# somehow GraphBlas failed with command make install, so I use make library instead. 
+
+# RUN bash -c "cd /qhw/external/SuiteSparse-5.7.1/ && make config BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.7.1 && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so"
+
+# RUN bash -c "cd /qhw/external/SuiteSparse-5.7.1/ && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.7.1"
+
+# RUN bash -c "cd /qhw/external/SuiteSparse-5.10.1/ && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.10.1"
+
+# RUN bash -c "cd /qhw/external/SuiteSparse-5.10.1/ && make config BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.10.1 && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so INSTALL=/qhw/external/LibSuiteSparse-5.10.1"
+
+
