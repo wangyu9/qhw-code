@@ -4,3 +4,5 @@
 `sudo docker build -t qhw .`
 
 Code soming soon!
+
+`git clone --recurse-submodules git@github.com:wangyu9/qhw.git`
