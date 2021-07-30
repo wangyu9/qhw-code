@@ -5,4 +5,4 @@
 
 Code soming soon!
 
-`git clone --recurse-submodules git@github.com:wangyu9/qhw.git`
+`git clone --recurse-submodules git@github.com:wangyu9/qhw-code.git`
