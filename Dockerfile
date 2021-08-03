@@ -68,8 +68,16 @@ RUN sudo apt-get --assume-yes install cmake
 
 ################ Dependencies for Quasi-Harmonic Weights #################
 
+RUN sudo apt-get --assume-yes purge gcc g++ # remove if there is a diff version.
 
-RUN sudo apt-get --assume-yes install gcc g++
+RUN sudo apt-get --assume-yes install gcc-7 g++-7
+
+# RUN sudo apt-get --assume-yes install gcc g++
+
+RUN ln -s /usr/local/bin/gcc-7 cc
+RUN ln -s /usr/local/bin/gcc-7 gcc
+RUN ln -s /usr/local/bin/c++-7 c++
+RUN ln -s /usr/local/bin/g++-7 g++
 
 RUN sudo apt-get --assume-yes install libgmp3-dev # otherwise I am missing the file gmp.h
 RUN sudo apt-get --assume-yes install libmpfr-dev # for mpfr.h 
@@ -131,4 +139,7 @@ RUN  bash -c "cd /qhw/external/armadillo/armadillo-10.6.1 && ./configure && make
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --force-yes --no-install-recommends  libmkl-full-dev
 
+RUN sudo apt-get --assume-yes install gdb
+
+# COPY ./linsolve /qhw/qhw
 
