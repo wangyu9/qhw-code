@@ -11,15 +11,23 @@ This repo is a c++ implementation of the paper
 
 To clone the repo, run
 
-`git clone --recurse-submodules git@github.com:wangyu9/qhw-code.git`
+`git clone --recurse-submodules https://github.com/wangyu9/qhw-code.git`
 
 To ease the installation of the dependencies, we provide a docker container. To build the docker container, run
 
 `sudo docker build -t qhw .`
 
+To start the docker container:
+
+`docker run -it qhw`
+
+optionally, you can use  `docker run  -v HOST-MACHINE-FOLDER:CONTAINER-MACHINE-FOLDER  -it qhw` to mount a volume to the docker container. 
+
+Alternatively, you are welcome to install all the dependencies manually by following the Dockerfile. 
+
 To build the c++ project, 
 
-`cd qhw`
+`cd qhw-code`
 `mkdir build; cd build;`
 `cmake ..; make;`
 
