@@ -1381,7 +1381,7 @@ double my_cholmod_l_pnorm_sparse
 /* === cholmod_sdmult ======================================================= */
 /* ========================================================================== */
 
-#include "cholmod_memory.cpp" // wangyu put it here. 
+// #include "cholmod_memory.cpp" // wangyu put it here. 
 
 #define REAL
 #include "t_mycholmod_sdmult.cpp"
