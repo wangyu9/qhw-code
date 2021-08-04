@@ -2,6 +2,9 @@
 
 This repo is a c++ implementation of the paper 
 
+![rep](https://user-images.githubusercontent.com/11622280/128125232-eb8188b3-e034-4f59-960d-b2bc9b9ee57f.jpg)
+
+
 *	[**Fast Quasi-Harmonic Weights for Geometric Data Interpolation**](https://dl.acm.org/doi/abs/10.1145/3450626.3459801).
 
 	Yu Wang and Justin Solomon. Massachusetts Institute of Technology. 
