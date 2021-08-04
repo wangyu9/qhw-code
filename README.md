@@ -79,3 +79,16 @@ tibiman-H | 36136.4
 
 Email wangyu9@mit.edu for any question and comment. 
 
+## BibTex
+```
+@article{wang2021fast,
+  title={Fast quasi-harmonic weights for geometric data interpolation},
+  author={Wang, Yu and Solomon, Justin},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={40},
+  number={4},
+  pages={1--15},
+  year={2021},
+  publisher={ACM New York, NY, USA}
+}
+```
