@@ -38,6 +38,8 @@ To build the c++ project, either within the container or on your own linux machi
 
 `cmake ..; make;`
 
+## Usage
+
 To compute the weights for the examples that we provided in ./data, run the following commands
 
 `./qhw -e /qhw/qhw/data/beast-H  --step_size 0.1 -n  4 --solver adamd --project --verbose 0`
@@ -51,3 +53,10 @@ dragon-H
 tibiman-H
 
 The resulting weights are stored in the file "W.mtx". 
+
+
+Example	|	Energy	|
+|:--------|:--------|
+beast-H	|		
+|=============================|
+
