@@ -1,9 +1,15 @@
-# The code for fast quasi-harmonic weights for geometric data interpolation.
+# Fast quasi-harmonic weights for geometric data interpolation.
 
+This repo is a c++ implementation of the paper 
+
+*	**Fast Quasi-Harmonic Weights for Geometric Data Interpolation**.\\
+	Yu Wang and Justin Solomon.\\
+	_ACM Transactions on Graphics 40(4)_.
+	_ACM SIGGRAPH 2021_.
+	[OpenAccessPaper](https://dl.acm.org/doi/abs/10.1145/3450626.3459801)
 
 `sudo docker build -t qhw .`
 
-Code soming soon!
 
 `git clone --recurse-submodules git@github.com:wangyu9/qhw-code.git`
 
