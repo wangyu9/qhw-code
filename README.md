@@ -45,12 +45,13 @@ To compute the weights for the examples that we provided in ./data, run the foll
 `./qhw -e /qhw/qhw/data/beast-H  --step_size 0.1 -n  4 --solver adamd --project --verbose 0`
 
 The data file folder can be 
-beast-H
-bunny-H 
-raptor-H 
-elephant-H 
-dragon-H
-tibiman-H
+beast-H,
+bunny-H, 
+raptor-H, 
+elephant-H, 
+dragon-H,
+tibiman-H.
+The files specifies the shape as well as the boundary conditions for the corresponding bone weight problem.
 
 The resulting weights are stored in the file "W.mtx". 
 
