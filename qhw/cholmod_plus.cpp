@@ -3,7 +3,7 @@
 
 #include "cholmod_plus.h"
 
-#include "cholmod_demo.h"
+// #include "cholmod_demo.h"
 #include "cholmod_l.h"
 #include "cholmod_plus.h"
 
