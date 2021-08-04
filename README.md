@@ -64,5 +64,6 @@ raptor-H | 34585.9
 elephant-H | 644.5
 dragon-H | 134.5
 tibiman-H | 36136.4
-|:--------|:--------|
+
+
 
