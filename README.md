@@ -60,7 +60,7 @@ raptor-H,
 elephant-H, 
 dragon-H,
 tibiman-H`.
-The files specifies the shape as well as the boundary conditions for the corresponding bone weight problem.
+The files specifies the shape (already meshed with handles) as well as the boundary conditions for the corresponding bone weight problem.
 
 The resulting weights are stored in the file "W.mtx", i.e. in the Matrix Market format (.mtx). 
 
