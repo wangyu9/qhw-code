@@ -130,4 +130,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --force-yes --no-instal
 
 RUN sudo apt-get --assume-yes install gdb
 
+RUN  bash -c "cd /qhw && git clone git clone --recurse-submodules https://github.com/wangyu9/qhw-code.git"
+RUN  bash -c "cd /qhw/qhw-code && mkdir build && cd build && cmake .. && make"
+
 # COPY ./linsolve /qhw/qhw
