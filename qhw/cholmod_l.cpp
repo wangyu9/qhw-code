@@ -21,7 +21,7 @@
  * SuiteSparse_long is normally defined as long, except for WIN64.
  */
 
-#include "cholmod_demo.h"
+#include "cholmod_l.h"
 #define NTRIALS 100
 
 int initLHS(cholmod_sparse* A, cholmod_common * cm)
