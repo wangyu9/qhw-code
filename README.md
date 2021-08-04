@@ -32,10 +32,12 @@ Alternatively, you are welcome to install all the dependencies manually by follo
 To build the c++ project, either within the container or on your own linux machine: 
 
 `cd qhw-code`
+
 `mkdir build; cd build;`
+
 `cmake ..; make;`
 
-To compute the weights for the examples given in ./data, run the following commands
+To compute the weights for the examples that we provided in ./data, run the following commands
 
 `./qhw -e /qhw/qhw/data/beast-H  --step_size 0.1 -n  4 --solver adamd --project --verbose 0`
 
