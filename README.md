@@ -1,4 +1,4 @@
-# Fast quasi-harmonic weights for geometric data interpolation.
+# Fast Quasi-Harmonic Weights for Geometric Data Interpolation.
 
 This repo is a c++ implementation of the paper 
 
@@ -54,9 +54,15 @@ tibiman-H
 
 The resulting weights are stored in the file "W.mtx". 
 
+If the code runs correctly, expect to see the following smoothness energies for the provided examples: 
 
 Example	|	Energy	|
 |:--------|:--------|
-beast-H	|		
+beast-H	| 111.5	
+bunny-H | 10509.6
+raptor-H | 34585.9
+elephant-H | 644.5
+dragon-H | 134.5
+tibiman-H | 36136.4
 |=============================|
 
