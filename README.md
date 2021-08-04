@@ -13,7 +13,7 @@ To clone the repo, run
 
 `git clone --recurse-submodules https://github.com/wangyu9/qhw-code.git`
 
-## installation
+## Installation
 
 To ease the installation of the dependencies, we provide a docker container. To build the docker container, run
 
@@ -27,7 +27,9 @@ optionally, you can use  `docker run  -v HOST-MACHINE-FOLDER:CONTAINER-MACHINE-F
 
 Alternatively, you are welcome to install all the dependencies manually by following the Dockerfile. 
 
-To build the c++ project, 
+## Code Compilation 
+
+To build the c++ project, either within the container or on your own linux machine: 
 
 `cd qhw-code`
 `mkdir build; cd build;`
