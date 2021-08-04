@@ -31,7 +31,7 @@ To start the docker container:
 
 optionally, you can use  `docker run  -v HOST-MACHINE-FOLDER:CONTAINER-MACHINE-FOLDER  -it qhw` to mount a volume to the docker container. 
 
-Alternatively, you are welcome to install all the dependencies manually by following the Dockerfile. It will lead to better performance since code always run slower in the dokcer container (which a light-weight virtual machine).    
+Alternatively, you are welcome to install all the dependencies manually by following the Dockerfile. It will lead to better performance since the code always runs slower in the dokcer container (which can be thought as a light-weight virtual machine).    
 
 ## Code Compilation 
 
