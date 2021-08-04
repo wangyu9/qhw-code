@@ -13,6 +13,8 @@ To clone the repo, run
 
 `git clone --recurse-submodules https://github.com/wangyu9/qhw-code.git`
 
+## installation
+
 To ease the installation of the dependencies, we provide a docker container. To build the docker container, run
 
 `sudo docker build -t qhw .`
