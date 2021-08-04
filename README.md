@@ -2,7 +2,7 @@
 
 This repo is a c++ implementation of the paper 
 
-*	**Fast Quasi-Harmonic Weights for Geometric Data Interpolation**.
+*	[**Fast Quasi-Harmonic Weights for Geometric Data Interpolation**](https://dl.acm.org/doi/abs/10.1145/3450626.3459801).
 
 	Yu Wang and Justin Solomon.
 	
