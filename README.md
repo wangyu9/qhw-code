@@ -35,6 +35,8 @@ Alternatively, you are welcome to install all the dependencies manually by follo
 
 ## Code Compilation 
 
+(You can skip this step if using our docker container.)
+
 To build the c++ project, either within the container or on your own linux machine: 
 
 `cd qhw-code`
@@ -43,11 +45,13 @@ To build the c++ project, either within the container or on your own linux machi
 
 `cmake ..; make;`
 
+If using our docker container, the compiled executable is located at `/qhw/qhw-code/build/qhw`
+
 ## Usage
 
 To compute the weights for the examples that we provided in ./data, run the following commands
 
-`./qhw -e /qhw/qhw/data/beast-H  --step_size 0.1 -n  4 --solver adamd --project --verbose 0`
+`./qhw -e /qhw/qhw-code/data/beast-H  --step_size 0.1 -n  4 --solver adamd --project --verbose 0`
 
 The data file folder can be 
 beast-H,
