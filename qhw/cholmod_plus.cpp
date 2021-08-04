@@ -1381,9 +1381,12 @@ double my_cholmod_l_pnorm_sparse
 /* === cholmod_sdmult ======================================================= */
 /* ========================================================================== */
 
-// #include "cholmod_memory.cpp" // wangyu put it here. 
+#ifdef EXPERIMENTAL
+
+#include "cholmod_memory.cpp" // wangyu put it here. 
 
 #define REAL
+
 #include "t_mycholmod_sdmult.cpp"
 //#define COMPLEX
 //#include "t_cholmod_sdmult.c"
@@ -2959,6 +2962,8 @@ static void r_cholmod_sdmult_omp
 	}
 }
 #undef ADVANCE
+
+#endif
 
 /* ========================================================================== */
 /* === starting from here are functions without alternatives in cholmod ================================================== */

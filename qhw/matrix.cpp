@@ -782,6 +782,7 @@ void Sparse::mul(const Dense& X, Dense& Y) const {
     return;
 }
 
+#ifdef EXPERIMENTAL
 void Sparse::mul2(const Dense& X, Dense& Y) const {
 	// Y = A*X
 
@@ -814,6 +815,7 @@ void Sparse::mul2(const Dense& X, Dense& Y) const {
 
 	return;
 }
+#endif
 
 void Sparse::mul(const Sparse& B, Sparse& Y, int requested_stype, bool keep_factor) const {
     int stype = requested_stype;		// 0 is unsymmetric, requested stype of C 

@@ -39,6 +39,8 @@ double my_cholmod_l_pnorm_sparse //getEntryRef
 //	cholmod_common* Common
 //);
 
+#ifdef EXPERIMENTAL
+
 static void r_cholmod_sdmult_mkl
 (
 	/* ---- input ---- */
@@ -66,6 +68,8 @@ int my_cholmod_l_sdmult_mkl
 	/* --------------- */
 	cholmod_common* Common
 );
+
+#endif
 
 // New: 
 

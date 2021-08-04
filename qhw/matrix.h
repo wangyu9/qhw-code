@@ -59,9 +59,9 @@ public:
 	void mul(const Dense& X, Dense& Y) const; // Y = A * X
 	Dense mul(const Dense& X) const;
 	Dense operator * (const Dense& X) const;
-
+#ifdef EXPERIMENTAL
 	void mul2(const Dense& X, Dense& Y) const;
-
+#endif
 	// Set keep_factor to true only if mul does not change the size and sparsity pattern of Y. 
 	void mul(const Sparse& B, Sparse& Y, int requested_stype=0, bool keep_factor=false) const; // 0: by default unsymmetric. // Y = A * B
 	Sparse mul(const Sparse& B, int requested_stype=0) const;
