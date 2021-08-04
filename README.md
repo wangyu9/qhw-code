@@ -58,7 +58,7 @@ dragon-H,
 tibiman-H.
 The files specifies the shape as well as the boundary conditions for the corresponding bone weight problem.
 
-The resulting weights are stored in the file "W.mtx". 
+The resulting weights are stored in the file "W.mtx", i.e. in the Matrix Market format (.mtx). 
 
 If the code runs correctly, expect to see the following smoothness energies for the provided examples: 
 
