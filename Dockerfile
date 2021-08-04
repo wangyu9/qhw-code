@@ -1,5 +1,6 @@
 # FROM ubuntu:16.04
 FROM ubuntu:20.04
+# it is much easiler to install mkl in command lines for ubuntu 20. otherwise you may have to manually install it from intel.com
 
 ############## BASIC DEPENDENCIES AND COMMON PKGs #####################
 
@@ -103,24 +104,7 @@ Run wget -q -O - "https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/ref
 RUN sudo mkdir /qhw/external/LibSuiteSparse-5.7.1
 
 
-# Run wget -q -O - "https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/refs/tags/v5.10.1.tar.gz" | tar -xzf - -C /qhw/external
-
-# RUN sudo mkdir /qhw/external/LibSuiteSparse-5.10.1
-
-
-# RUN bash -c "cd /qhw/external/SuiteSparse-5.7.1/ && make config  BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.7.1 && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.7.1"
-
 RUN bash -c "cd /qhw/external/SuiteSparse-5.7.1/ && make config LAPACK=-llapack BLAS=-lblas   INSTALL=/qhw/external/LibSuiteSparse-5.7.1 && make library  LAPACK=-llapack BLAS=-lblas  INSTALL=/qhw/external/LibSuiteSparse-5.7.1"
-
-# somehow GraphBlas failed with command make install, so I use make library instead. 
-
-# RUN bash -c "cd /qhw/external/SuiteSparse-5.7.1/ && make config BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.7.1 && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so"
-
-# RUN bash -c "cd /qhw/external/SuiteSparse-5.7.1/ && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.7.1"
-
-# RUN bash -c "cd /qhw/external/SuiteSparse-5.10.1/ && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.10.1"
-
-# RUN bash -c "cd /qhw/external/SuiteSparse-5.10.1/ && make config BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so  INSTALL=/qhw/external/LibSuiteSparse-5.10.1 && make install BLAS=/usr/lib/libblas.so  LAPACK=/usr/lib/liblapack.so INSTALL=/qhw/external/LibSuiteSparse-5.10.1"
 
 RUN sudo mkdir /qhw/external/tensorflow/
 
