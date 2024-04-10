@@ -49,7 +49,7 @@ If using our docker container, the compiled executable is located at `/qhw/qhw-c
 
 ## Usage
 
-To compute the weights for the examples that we provided in `./data`, run the following commands
+To compute the weights for the examples that we provided in `./data`, run the following command
 
 `./qhw -e /qhw/qhw-code/data/beast-H  --step_size 0.1 -n  4 --solver adamd --project --verbose 0`
 
@@ -60,11 +60,11 @@ raptor-H,
 elephant-H, 
 dragon-H,
 tibiman-H`.
-The files specifies the shape (already meshed with handles) as well as the boundary conditions for the corresponding bone weight problem.
+The files specify the shape (already meshed with handles) as well as the boundary conditions for the corresponding bone weight problem.
 
 The resulting weights are stored in the file "W.mtx", i.e. in the Matrix Market format (.mtx). 
 
-If the code runs correctly, expect to see the following smoothness energies for the provided examples: 
+If the code runs correctly, expect to see the following smoothness energy for the provided examples: 
 
 Example	|	Energy	|
 |:--------|:--------|
